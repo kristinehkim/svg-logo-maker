@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/kristinehkim/svg-logo-maker#readme",
   "dependencies": {
-    "inquirer": "^9.2.7"
+    "inquirer": "8.2.4"
   }
 }
