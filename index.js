@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const prompts = require('./lib/prompts');
 const { writeFile } = require('fs').promises;
 const { Circle, Triangle, Square } = require('./lib/shapes');
-const generateLogo = require('./lib/generateLogo')
+// const generateLogo = require('./lib/generateLogo')
 
 const init = async () => {
     try {
@@ -11,31 +11,18 @@ const init = async () => {
         let shape;
         if (responses.shape === 'circle') {
             shape = new Circle();// creating a shape that is a new Circle, it has all the functions that circle has
-            // shape.setColor(responses.shapeColor);// calling setColor for that shape and it gets passed the color
-            // shape.setText(responses.textLogo);
-            // shape.setTextColor(responses.textColor);
-            // shape = new Svg();
-            // shape.setText(responses.textLogo);
-            // shape.setTextColor(responses.setTextColor)
         } else if (responses.shape === 'triangle') {
             shape = new Triangle();
-            // shape.setColor(responses.shapeColor);
-            // shape.setText(responses.textLogo);
-            // shape.setTextColor(responses.textColor);
         } else {
             shape = new Square();
-            // shape.setColor(responses.shapeColor);
-            // shape.setText(responses.textLogo);
-            // shape.setTextColor(responses.textColor);
         }
-        shape.setColor(responses.shapeColor);
+        shape.setColor(responses.shapeColor);// calling setColor for that shape and it gets passed the color
         shape.setText(responses.textLogo);
         shape.setTextColor(responses.textColor);
 
         console.log('shape', shape);
         console.log('Generated logo.svg')
         writeFile('logo.svg', shape.render()); // render belongs to shape which is why it is shape.render, we're calling shape's render function
-        //do the same for text and textColor
     }
     catch (err) {
         console.error(err)
@@ -55,6 +42,5 @@ init();
   <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
 
 </svg> */}
-// create class svg that will tie it all together with a constructor that will hold shape stuff and text stuff
-// you need a method to capture the text - in svg class you're going to need a method to capture the color and the text line 34 "white" and SVG part
+
 // "echo \"Error: no test specified\" && exit 1"
