@@ -1,6 +1,6 @@
 # SVG Logo Maker
 > This is a Node.js command-line application that takes user input to generate a logo and save it as an SVG file.  Tests on the back end have been created, as well.
-> Live demo [_here_](https://drive.google.com/file/d/1wDUD3ghgZ6A6pxmkZ9vGyZeD1eCL8LJu/view). <!-- If you have the project hosted somewhere, include the link here. -->
+> Walkthrough Video [_here_](https://drive.google.com/file/d/1SiUwtdxptFIgrANtEZa2FIWCozDHGuHs/view). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -33,7 +33,7 @@ First, the user will be prompted with a question asking to enter the text of the
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./assets/SVGscreenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
@@ -58,13 +58,8 @@ Project is: _in progress_.
 
 
 ## Room for Improvement
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Text to be more centered
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
 
 
 ## Acknowledgements
