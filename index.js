@@ -2,12 +2,11 @@ const inquirer = require('inquirer')
 const prompts = require('./lib/prompts');
 const { writeFile } = require('fs').promises;
 const { Circle, Triangle, Square } = require('./lib/shapes');
-// const generateLogo = require('./lib/generateLogo')
 
 const init = async () => {
     try {
         const responses = await inquirer.prompt(prompts);
-        console.log(responses)
+        // console.log(responses) // to see the responses as an object
         let shape;
         if (responses.shape === 'circle') {
             shape = new Circle();// creating a shape that is a new Circle, it has all the functions that circle has
@@ -20,7 +19,7 @@ const init = async () => {
         shape.setText(responses.textLogo);
         shape.setTextColor(responses.textColor);
 
-        console.log('shape', shape);
+        // console.log('shape', shape);// 'shape' to see shape chosen by user, shape to see user choices as an object
         console.log('Generated logo.svg')
         writeFile('logo.svg', shape.render()); // render belongs to shape which is why it is shape.render, we're calling shape's render function
     }
