@@ -21,7 +21,7 @@ const init = async () => {
 
         // console.log('shape', shape);// 'shape' to see shape chosen by user, shape to see user choices as an object
         console.log('Generated logo.svg')
-        writeFile('logo.svg', shape.render()); // render belongs to shape which is why it is shape.render, we're calling shape's render function
+        writeFile(`./examples/${responses.shape}.svg`, shape.render()); // render belongs to shape which is why it is shape.render, we're calling shape's render function
     }
     catch (err) {
         console.error(err)
